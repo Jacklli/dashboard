@@ -24,7 +24,7 @@ if len(sys.argv) != 2:
     print "usage: tr_init <language-code>"
     sys.exit(1)
 os.system(pybabel +
-          ' extract -F babel.cfg -k lazy_gettext -o messages.pot rrd')
+          ' extract -F babel.cfg -k lazy_gettext -o messages.pot dashboard')
 os.system(pybabel +
-          ' init -i messages.pot -d rrd/translations -l ' + sys.argv[1])
+          ' init -i messages.pot -d dashboard/translations -l ' + sys.argv[1])
 os.unlink('messages.pot')

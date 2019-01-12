@@ -1,4 +1,4 @@
-#!env/bin/python
+#-*- coding:utf-8 -*-
 # Copyright 2017 Xiaomi, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,10 +14,9 @@
 # limitations under the License.
 
 
-import os
-import sys
-if sys.platform == 'win32':
-    pybabel = 'env\\Scripts\\pybabel'
-else:
-    pybabel = 'env/bin/pybabel'
-os.system(pybabel + ' compile -d dashboard/translations')
+import json
+from dashboard import corelib
+from dashboard import config
+
+from dashboard.utils.logger import logging
+log = logging.getLogger(__file__)

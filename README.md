@@ -90,14 +90,14 @@ The open-falcon modules' configuration files is `path/to/open-falcon-binaries/<m
 **MAKE SURE** Open-falcon api module is up running and works as expcted before start dashboard.
 
 
-    dashboard config file is 'rrd/config.py', change it if necessary.
+    dashboard config file is 'dashboard/config.py', change it if necessary.
 
     ## set API_ADDR to your falcon-plus api modules addr, default value as bellow:
     API_ADDR = "http://127.0.0.1:8080/api/v1" 
 
     ## set PORTAL_DB_* if necessary, default mysql user is root, default passwd is ""
     ## set ALARM_DB_* if necessary, default mysql user is root, default passwd is ""
-    ## if following error msg occurred, please check DB config in rrd/config.py
+    ## if following error msg occurred, please check DB config in dashboard/config.py
     
     Error 'NoneType' object has no attribute 'cursor'
 

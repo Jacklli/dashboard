@@ -1,4 +1,4 @@
-#!env/bin/python
+#-*- coding:utf-8 -*-
 # Copyright 2017 Xiaomi, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,10 +14,10 @@
 # limitations under the License.
 
 
-import os
-import sys
-if sys.platform == 'win32':
-    pybabel = 'env\\Scripts\\pybabel'
-else:
-    pybabel = 'env/bin/pybabel'
-os.system(pybabel + ' compile -d dashboard/translations')
+from dashboard import config
+import logging
+logging.basicConfig(
+        format='%(asctime)s %(levelname)s:%(message)s',
+        datefmt="%Y-%m-%d %H:%M:%S",
+        level=config.LOG_LEVEL)
+
